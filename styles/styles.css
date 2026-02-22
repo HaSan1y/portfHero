@@ -936,6 +936,94 @@ table.paleBlueRows tfoot td {
        columns: 3;
 }
 
+:root {
+  --primary: #2563eb;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent: #10b981;
+  /* Green for completed */
+}
+
+.dip-container {
+  font-family: "Inter", sans-serif;
+  max-width: 600px;
+}
+
+.dip-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  border-left: 4px solid var(--primary);
+  padding-left: 12px;
+}
+
+.dip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dip-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.dip-card:hover {
+  transform: translateX(8px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.platform {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.course-name {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.status-badge {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.completed .status-badge {
+  background: #ecfdf5;
+  color: var(--accent);
+}
+
+.pending {
+  opacity: 0.7;
+  border-style: dashed;
+}
+
+.pending .status-badge {
+  background: #f1f5f9;
+  color: var(--text-muted);
+}
+
 #blink {
   animation: blink 1s linear infinite;
 }
