@@ -6,7 +6,12 @@
 }
 
 :root {
-  --color-primary: radial-gradient(ellipse at top, #313953, transparent), radial-gradient(ellipse at bottom, rgb(26, 27, 26), transparent);
+  --primary: #2563eb;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent: #10b981;
+  --color-primary: #000000;
   --color-secondary: hsl(145, 63%, 42%);
   --color-white: #ffffff;
   --color-black: #141313;
@@ -37,7 +42,7 @@
 
 body {
   background: var(--color-primary);
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   transition: all 0.4s ease-in-out;
 }
@@ -186,6 +191,11 @@ section {
   pointer-events: none;
 }
 
+article,
+.ic2 {
+  color: var(--color-gray1);
+}
+
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -237,7 +247,7 @@ section {
   font-size: 14px;
   letter-spacing: 2px;
   word-spacing: -3.6px;
-  color: #000000;
+  color: var(--text-muted);
   font-weight: 700;
   text-decoration: none;
   font-style: oblique;
@@ -261,7 +271,7 @@ section {
 
 table {
   border-collapse: collapse;
-  font-family: "Roboto Condensed", Times, serif;
+  font-family: Times, serif;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -421,6 +431,7 @@ table.paleBlueRows tfoot td {
   background: rgba(0, 0, 0, 0.05);
   padding: 40px;
   box-shadow: 0 0 20px 5px rgb(255, 255, 255);
+  color: var(--text-main);
 }
 .about-stats .progress-bars .progress-bar {
   display: flex;
@@ -505,6 +516,7 @@ table.paleBlueRows tfoot td {
   text-align: center;
   padding: 3.5rem 0;
   position: relative;
+  color: var(--color-secondary);
 }
 .stat-title::before {
   content: "";
@@ -712,6 +724,7 @@ table.paleBlueRows tfoot td {
 }
 .contact-content-con .left-contact {
   margin: 0 20px;
+  color: var(--text-main);
 }
 .contact-content-con .left-contact h4 {
   margin-top: 1rem;
@@ -847,6 +860,7 @@ table.paleBlueRows tfoot td {
   display: flex;
   padding: 0.5rem 3rem;
   text-align: center;
+  color: var(--text-main);
 }
 .sub-btn:hover {
   background: var(--color-gray4);
@@ -876,6 +890,7 @@ table.paleBlueRows tfoot td {
   align-items: center;
   text-align: center;
   padding: 0 2rem;
+  color: var(--text-main);
 }
 .main-btn .btn-icon {
   background: var(--color-secondary);
@@ -902,6 +917,15 @@ table.paleBlueRows tfoot td {
   transition: all 0.4s ease-out;
 }
 
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  border-left: 1px solid var(--color-gray2);
+  padding-left: 12px;
+}
+
 .main-title {
   text-align: center;
 }
@@ -911,6 +935,7 @@ table.paleBlueRows tfoot td {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 100px;
+  color: var(--text-main);
 }
 .main-title h2 span {
   color: var(--color-secondary);
@@ -934,15 +959,6 @@ table.paleBlueRows tfoot td {
 .earn {
   -moz-columns: 3;
        columns: 3;
-}
-
-:root {
-  --primary: #2563eb;
-  --bg-card: #ffffff;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --accent: #10b981;
-  /* Green for completed */
 }
 
 .dip-container {
@@ -1114,6 +1130,7 @@ form {
     padding-left: 0;
   }
   .about-stats .progress-bars,
+  .timeline,
   .blogs {
     grid-template-columns: 1fr;
     overflow: auto;
