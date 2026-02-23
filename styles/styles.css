@@ -76,7 +76,7 @@ header {
 
 label {
   display: inline-block;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 section {
@@ -323,6 +323,15 @@ table a {
   top: 0;
   padding: 10px;
   font-weight: bolder;
+}
+
+table a:focus-visible,
+table a:hover {
+  opacity: 0.5;
+  font-weight: bolder;
+  font-style: oblique;
+  font-variant: small-caps;
+  text-transform: none;
 }
 
 table.paleBlueRows td,
@@ -959,6 +968,12 @@ h1 {
 .earn {
   -moz-columns: 3;
        columns: 3;
+}
+.earn a:hover {
+  font-weight: bolder;
+  font-style: oblique;
+  font-variant: small-caps;
+  text-transform: none;
 }
 
 .dip-container {
