@@ -331,7 +331,7 @@ table a:hover {
   font-weight: bolder;
   font-style: oblique;
   font-variant: small-caps;
-  text-transform: none;
+  font-size: larger;
 }
 
 table.paleBlueRows td,
@@ -710,6 +710,7 @@ table.paleBlueRows tfoot td {
   border-top: 8px solid var(--color-secondary);
 }
 .blogs .blog .blog-text h4 {
+  text-transform: uppercase;
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
   transition: all 0.4s ease-in-out;
@@ -1082,6 +1083,160 @@ h1 {
 
 form {
   overflow: auto;
+}
+
+.yxcv {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  flex-direction: column;
+  padding-top: 9rem;
+}
+
+.asdf {
+  position: relative;
+  margin-top: 3rem;
+  gap: 2rem;
+  margin: 2rem auto;
+  justify-content: space-around;
+  display: flex;
+  flex: 1 1 50%;
+  display: flex;
+  overflow: hidden;
+  margin: 2rem auto;
+  mask: linear-gradient(transparent, #ffffff 10%, #ffffff 90%, transparent 100%);
+  -webkit-mask: linear-gradient(transparent, #ffffff 10%, #ffffff 90%, transparent 100%);
+}
+
+.asdf.animated {
+  flex-wrap: nowrap;
+  width: -moz-max-content;
+  width: max-content;
+  will-change: transform;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.color-container {
+  border-color: var(--text-muted);
+  background: var(--primary);
+}
+
+.details-container {
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  display: grid;
+  align-items: center;
+  flex: 1;
+  background: var(--color-gray5);
+  border-radius: 2rem;
+  border: var(--text-muted) 0.1rem solid;
+  border-color: var(--text-muted);
+  text-align: center;
+  box-shadow: 5px 5px var(--text-muted);
+  mask: linear-gradient(transparent, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask: linear-gradient(transparent, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  border-color: var(--text-muted);
+  background: var(--color-gray5);
+}
+
+.project-img {
+  box-shadow: 2px 2px var(--text-muted);
+  border-radius: 1.5rem;
+  max-width: 300px;
+  height: 200px;
+  vertical-align: middle;
+  shape-margin: 0.8rem;
+}
+
+.project-img:hover {
+  transform: translateX(2%);
+  transform: translateY(1%);
+}
+
+.experience-sub-title {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.article-container {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* text-align: initial; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.project-btn {
+  color: var(--text-main);
+  background-color: var(--color-gray5);
+  border-color: var(--text-muted);
+}
+
+#theme:active,
+.btn-color-1:active,
+.btn-color-2:active {
+  background-color: var(--color-gray5);
+  outline: white solid 2px;
+}
+
+#theme:hover,
+.btn-color-1:hover,
+.btn-color-2:hover {
+  background-color: var(--color-gray5);
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+#theme:focus,
+.btn-color-1:focus,
+.btn-color-2:focus {
+  outline: red solid 2px;
+  background-color: var(--color-gray5);
+  opacity: 0.9;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: var(--text-muted);
+  color: var(--text-main);
 }
 
 @media screen and (max-width: 1432px) {

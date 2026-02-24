@@ -1,6 +1,6 @@
 function PageTransitions() {
 	const sections = document.querySelectorAll(".section");
-	const sectBtns = document.querySelectorAll(".controlls");
+	//const sectBtns = document.querySelectorAll(".controlls");
 	const sectBtn = document.querySelectorAll(".control");
 	const allsections = document.querySelector(".main-content");
 	for (let i = 0; i < sectBtn.length; i++) {
@@ -40,3 +40,23 @@ document.getElementById("pdfLink").addEventListener("click", function (e) {
 	e.preventDefault();
 	window.open("./online2023.pdf");
 });
+
+//////////////////////////////////////// animation for about section
+const scrollers = document.querySelectorAll(".asdf");
+
+if (!window.matchMedia("(prefers-color-scheme: reduce)").matches) {
+	addAnimation();
+}
+
+function addAnimation() {
+	scrollers.forEach((scrollerElement) => {
+		scrollerElement.classList.add("animated");
+		const itemsToScroll = Array.from(scrollerElement.children);
+
+		itemsToScroll.forEach((item) => {
+			const dublicatedItem = item.cloneNode(true);
+			dublicatedItem.setAttribute("aria-hidden", "true");
+			scrollerElement.appendChild(dublicatedItem);
+		});
+	});
+}
