@@ -418,103 +418,149 @@ article,
   width: 100%;
   margin: auto;
   overflow: auto;
+  padding: 2rem 0;
 }
 
 table {
   border-collapse: collapse;
-  font-family: Times, serif;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  text-align: center;
-  margin: auto;
-  color: #000000;
-  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: var(--color-white);
   text-decoration: none;
-  font-style: oblique;
-  font-variant: small-caps;
-  text-transform: none;
+  background: var(--color-gray6);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 caption,
 .earn {
-  text-align: left;
-  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-  background-color: hsla(0, 0%, 0%, 0.5);
-  color: white;
-  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 100%;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
 th,
 td {
-  text-align: left;
-  border: 1px solid var(--color-gray5);
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  border: none;
+  height: 100%;
+  vertical-align: middle;
 }
 
 th {
-  color: var(--color-white);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+  white-space: normal;
+  min-width: 140px;
 }
 
 td {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  background-color: rgba(0, 247, 255, 0.151);
-  padding: 10px;
+  background-color: rgba(212, 212, 212, 0.05);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.1);
+  min-width: 140px;
+  height: 80px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+table tbody tr {
+  transition: all 0.3s ease;
+}
+
+table tbody tr:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateX(4px);
+}
+
+table tbody tr:hover td {
+  background-color: rgba(16, 185, 129, 0.08);
+  border-bottom-color: var(--color-secondary);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 table a {
-  left: 0;
-  top: 0;
-  padding: 10px;
-  font-weight: bolder;
+  color: var(--color-secondary);
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 0;
+  word-break: break-word;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-table a:focus-visible,
-table a:hover {
-  opacity: 0.5;
-  font-weight: bolder;
-  font-style: oblique;
-  font-variant: small-caps;
-  font-size: larger;
+table a:hover,
+table a:focus-visible {
+  color: var(--color-white);
+  border-bottom-color: var(--color-secondary);
+  background: linear-gradient(120deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+}
+
+table a:active {
+  color: var(--color-secondary);
 }
 
 table.paleBlueRows td,
 table.paleBlueRows th {
-  padding: 3px 2px;
+  padding: 1.2rem 1.5rem;
 }
 
 table.paleBlueRows tbody td {
-  font-size: 13px;
+  font-size: 0.9rem;
 }
 
 table.paleBlueRows thead {
-  background: #0b6fa4;
+  background: var(--color-secondary);
 }
 
 table.paleBlueRows thead th {
-  font-size: 17px;
-  font-weight: bold;
-  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 table.paleBlueRows thead th:first-child {
   border-left: none;
 }
 
+table.paleBlueRows tbody tr:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+table.paleBlueRows tfoot {
+  background: rgba(16, 185, 129, 0.15);
+}
+
 table.paleBlueRows tfoot td {
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background: hsla(0, 0%, 15%, 0.5);
-  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  border-top: 2px solid var(--color-secondary);
+  padding: 1.2rem 1.5rem;
 }
 
 .about-container {
@@ -536,7 +582,7 @@ table.paleBlueRows tfoot td {
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d;
 }
-.about-container .right-about:hover {
+.about-container .right-about .about-item:hover {
   cursor: default;
   transform: translateY(-5px) rotateX(5deg) rotateY(5deg) translateZ(15px);
   border: 1px solid var(--color-secondary);
@@ -857,12 +903,12 @@ table.paleBlueRows tfoot td {
   transform-style: preserve-3d;
   overflow: hidden;
 }
-.blogs:hover {
+.blogs .blog:hover {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px) rotateX(2deg) rotateY(2deg) translateZ(10px);
   transition: all 0.4s ease-in-out;
 }
-.blogs:hover img {
+.blogs .blog:hover img {
   filter: grayscale(0);
   transform: scale(1.1);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
@@ -958,14 +1004,12 @@ table.paleBlueRows tfoot td {
   transition: all 0.4s ease-in-out;
   transform-style: preserve-3d;
 }
-.contact-content-con .contact-icon:hover {
+.contact-content-con .contact-icon a:hover {
   background: var(--color-secondary);
   transform: translateY(-5px) rotateX(10deg) rotateY(10deg) translateZ(10px);
 }
-.contact-content-con .contact-icon:hover i {
-  color: var(--color-primary);
-}
 .contact-content-con .contact-icon i {
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1025,12 +1069,38 @@ table.paleBlueRows tfoot td {
   border-radius: 10px;
   padding: 10px;
 }
-.btn-con:hover {
-  background: var(--color-gray4);
-  transition: all 0.4s ease-out;
-}
 .btn-con .btn-icon {
   color: var(--color-secondary);
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+.btn-con #pdfLink {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  color: inherit;
+  font-weight: 600;
+  display: flex;
+  align-self: flex-start;
+  margin: 0 0 40px 0;
+  align-items: center;
+  padding: 10px;
+}
+.btn-con #pdfLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.btn-con #pdfLink:hover::before {
+  width: 100%;
+  height: 100%;
+  background: var(--color-secondary);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
 }
 
 .sub-btn {
